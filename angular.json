@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "runt-app"
+    }
+  },
+  "defaultProject": "runt-app",
+  "cli": {
+    "analytics": false
+  }
 }
