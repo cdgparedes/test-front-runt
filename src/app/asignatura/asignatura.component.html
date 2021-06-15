@@ -1,0 +1,38 @@
+<div class="card border-primary mb-3" >
+    <div class="card-header " >Sistema de Clases del Colegio el Olimpo</div>
+    <div class="card-body text-primary " >
+      
+        <h5 class="card-title" aling="center">Listado de docentes</h5>
+    
+      <select  [(ngModel)]="opcionSeleccionado" (change)="getAsignaturas($event.target.value)" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" >
+        <option selected>Selecione el docente</option>
+        <option  *ngFor="let profesor of profesores" 
+                 value={{profesor.idAsignatura}}
+                 >
+            {{profesor.nombre}}
+        </option>
+      </select>        
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <!--<th>id</th>-->
+                    <th >Nombre</th>
+                    <th>Estudiante</th>
+                    <th>Curso</th>
+                </tr>
+             </thead>
+             <tbody>
+                    
+                 <tr *ngFor=" let estudiante of estudiantes" >
+                      <!--<td>{{ res.id }}</td>-->
+                      <td>{{ materia }}</td>
+                      <td>{{ estudiante.nombre }}</td>
+                      <td>{{ curso }}</td>     
+                         
+                    
+                </tr> 
+             </tbody>
+        </table>
+
+    </div>
+  </div>
